@@ -17,9 +17,7 @@
 
 .container {
   display: flex;
-  align-items: stretch;
-
-  height: 100vh;
+  min-height: 100vh;
 }
 
 /* Side header */
@@ -53,14 +51,13 @@ header {
 main {
   flex: 2;
   background: #f9fafb;
-  display: grid;
-  grid-template-rows: 1.15fr 1fr 1fr;
+  padding-bottom: 20px;
 }
 
 .right-text {
   padding-left: var(--left-padding);
   padding-right: 10rem;
-  padding-top: 9rem;
+  padding-top: clamp(1rem, 200px, 3rem);
   padding-bottom: 1.25rem;
 
   font-weight: 500;
