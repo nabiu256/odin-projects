@@ -1,3 +1,5 @@
+![The Odin Project banner](./assets/odin_banner.png)
+
 # The Odin Project projects
 
 This repository contains my humble takes on the projects
@@ -9,12 +11,12 @@ You can visit the results on the associated
 
 ## Projects
 
-Intermediate HTML and CSS
+**Intermediate HTML and CSS**
 
 - Sign-up Form: [project definition](https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-sign-up-form), [result](https://janadev1.github.io/odin-projects/sign-up-form/index.html).
-- Admin Dashboard: [project definition](https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-admin-dashboard), [work in progress](https://janadev1.github.io/odin-projects/admin-dashboard/index.html).
+- Admin Dashboard: [project definition](https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-admin-dashboard), [result](https://janadev1.github.io/odin-projects/admin-dashboard/index.html).
 
-JavaScript
+**JavaScript**
 
 - Library: [project definition](https://www.theodinproject.com/lessons/node-path-javascript-library), pending.
 - Tic Tac Toe: [project definition](https://www.theodinproject.com/lessons/node-path-javascript-tic-tac-toe), pending.
@@ -22,6 +24,6 @@ JavaScript
 - Todo List: [project definition](https://www.theodinproject.com/lessons/node-path-javascript-todo-list), pending.
 - Weather App: [project definition](https://www.theodinproject.com/lessons/node-path-javascript-weather-app), pending.
 
-Advanced HTML and CSS
+**Advanced HTML and CSS**
 
 - Homepage: [project definition](https://www.theodinproject.com/lessons/node-path-advanced-html-and-css-homepage), pending.
