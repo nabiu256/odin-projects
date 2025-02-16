@@ -246,13 +246,42 @@ section.projects .cards-container {
   align-self: flex-end;
 }
 
-.project-buttons > span {
+.project-buttons>span {
   margin-inline: 0.5rem;
 }
 
 section.announcements {
   grid-area: announcements;
-  background-color: orange;
+}
+
+.announcements>h2 {
+  padding-bottom: 0.75rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.announcements-card {
+  background-color: white;
+  border-radius: 7px;
+  padding-block: 2rem;
+  padding-inline: 2rem;
+
+  font-size: 0.8rem;
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.1);
+}
+
+.announcements-card>h3 {
+  padding-bottom: 0.2rem;
+}
+
+.announcements-card>p {
+  color: #7c7c7c;
+  margin-bottom: 0.75rem;
+}
+
+.announcements-card>hr {
+  border-color: rgba(0, 0, 0, 0.3);
+  margin-bottom: 0.75rem;
 }
 
 section.trending {
