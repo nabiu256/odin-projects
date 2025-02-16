@@ -171,11 +171,11 @@ nav .logo:hover span {
   transition: all 200ms ease-in-out;
 }
 
-.nav-link:hover {
+li:hover .nav-link {
   background-color: #6cb6de;
   /* After some changes, this transition produces some jankiness. */
-  /* Should investigate further before implementing */
-  /* translate: -5px; */
+  /* Should investigate further */
+  translate: -5px;
 }
 
 nav i {
@@ -187,5 +187,35 @@ main {
   background: #e2e8f0;
   grid-area: main;
 
+  padding-inline: 1.5rem;
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+
   z-index: -1;
+
+  display: grid;
+  grid-template-columns: 2.5fr 1fr;
+  grid-template-areas:
+    "projects announcements"
+    "projects trending";
+}
+
+section.projects {
+  background-color: teal;
+  grid-area: projects;
+}
+
+section.projects .cards-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+section.announcements {
+  grid-area: announcements;
+  background-color: orange;
+}
+
+section.trending {
+  grid-area: trending;
+  background-color: cyan;
 }
