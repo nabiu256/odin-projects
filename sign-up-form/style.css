@@ -1,57 +1,18 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-
-
-/* Own CSS */
 @font-face {
   font-family: "Norse-Bold";
   src: url(assets/Norse-Bold.otf);
+}
+
+:root {
+  --left-padding: 3rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  scroll-behavior: smooth;
+  font-family: sans-serif;
 }
 
 .container {
@@ -61,8 +22,7 @@ table {
   height: 100vh;
 }
 
-
-/* Header */
+/* Side header */
 header {
   flex: 1;
 
@@ -72,24 +32,92 @@ header {
 }
 
 .header-logo {
-	position: relative;
-	top: 20vh;
-	padding-block: 15px;
-	
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	gap: 5px;
+  position: relative;
+  top: 20vh;
+  padding-block: 15px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
   background: rgb(0, 0, 0, 0.6);
 }
 
 .header-logo > h1 {
-	color: white;
-	font-family: "Norse-Bold", Verdana, Arial, Helvetica, sans-serif;
-	font-size: 7rem;
+  color: white;
+  font-family: "Norse-Bold", Verdana, Arial, Helvetica, sans-serif;
+  font-size: 7rem;
 }
 
-/* Main */
+/* Main - right side */
 main {
   flex: 2;
+  background: #f9fafb;
+  display: grid;
+  grid-template-rows: 1.15fr 1fr 1fr;
+}
+
+.right-text {
+  padding-left: var(--left-padding);
+  padding-right: 10rem;
+  padding-top: 9rem;
+  padding-bottom: 1.25rem;
+
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+/* Form */
+fieldset {
+  background: white;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  padding: 20px 10px;
+  padding-left: var(--left-padding);
+}
+
+.inputs-container {
+  padding-block: 20px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+input {
+  display: block;
+  margin-top: 3px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 3px;
+  padding: 6px;
+  font-size: 1rem;
+
+  transition: box-shadow 150ms ease-in-out;
+}
+
+input:focus {
+  outline: 0;
+  border: 1px solid #557ae1;
+  box-shadow: rgba(0, 0, 0, 0.1) 1.95px 1.95px 2.6px;
+}
+
+label {
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.1rem;
+  font-weight: bold;
+}
+
+/* Submit section */
+.submit-container {
+  padding-top: 25px;
+  padding-left: var(--left-padding);
+}
+
+button {
+  background: #596d48;
+  padding: 15px 60px;
+  border-radius: 10px;
+  color: white;
+  margin-bottom: 20px;
+  font-weight: bold;
 }
