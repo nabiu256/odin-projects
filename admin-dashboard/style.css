@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+}
+
+.container {
+  min-height: 100vh;
+
+  display: grid;
+  grid-template: repeat(5, 1fr) / repeat(5, 1fr);
+  grid-template-areas:
+    "nav header header header header"
+    "nav main main main main"
+    "nav main main main main"
+    "nav main main main main"
+    "nav main main main main";
+}
+
+header {
+  background: #7b66ff;
+  grid-area: header;
+}
+
+nav {
+  background: #5fbdff;
+  grid-area: nav;
+}
+
+main {
+  background: #c5fff8;
+  grid-area: main;
+}

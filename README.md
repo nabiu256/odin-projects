@@ -12,7 +12,7 @@ You can visit the results on the associated
 Intermediate HTML and CSS
 
 - Sign-up Form: [project definition](https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-sign-up-form), [result](https://janadev1.github.io/odin-projects/sign-up-form/index.html).
-- Admin Dashboard: [project definition](https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-admin-dashboard), pending.
+- Admin Dashboard: [project definition](https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-admin-dashboard), [work in progress](https://janadev1.github.io/odin-projects/admin-dashboard/index.html).
 
 JavaScript
 
