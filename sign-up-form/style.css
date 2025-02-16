@@ -47,13 +47,20 @@ table {
 	border-spacing: 0;
 }
 
-/* Actual start of your CSS */
+
+/* Own CSS */
+@font-face {
+  font-family: "Norse-Bold";
+  src: url(assets/Norse-Bold.otf);
+}
+
 .container {
   display: flex;
   align-items: stretch;
 
   height: 100vh;
 }
+
 
 /* Header */
 header {
@@ -65,8 +72,21 @@ header {
 }
 
 .header-logo {
+	position: relative;
+	top: 20vh;
+	padding-block: 15px;
+	
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 5px;
   background: rgb(0, 0, 0, 0.6);
-  padding-block: 5px;
+}
+
+.header-logo > h1 {
+	color: white;
+	font-family: "Norse-Bold", Verdana, Arial, Helvetica, sans-serif;
+	font-size: 7rem;
 }
 
 /* Main */
