@@ -11,20 +11,29 @@
 </head>
 
 <body>
-  <h1>Your library</h1>
-  <form action="" id="books-form">
-    <label for="title">Title</label>
-    <input type="text" name="title" id="title" />
-    <label for="author">Author</label>
-    <input type="text" name="author" id="author" />
-    <label for="pages">Pages</label>
-    <input type="number" name="pages" id="pages" />
-    <label for="read">Read?</label>
-    <input type="checkbox" name="read" id="read" />
+  <main>
+    <h1>Your library</h1>
 
-    <button>Add book</button>
-  </form>
-  <div id="books-grid"></div>
+    <dialog>
+      <form action="" id="books-form" autofocus>
+        <label for="title">Title</label>
+        <input type="text" name="title" id="title" required />
+        <label for="author">Author</label>
+        <input type="text" name="author" id="author" required />
+        <label for="pages">Pages</label>
+        <input type="number" name="pages" id="pages" required />
+        <label for="read">Read?</label>
+        <input type="checkbox" name="read" id="read" />
+
+        <button id="dialog-close" type="button">Cancel</button>
+        <button>Add book</button>
+      </form>
+    </dialog>
+
+    <button id="dialog-show">Add book</button>
+
+    <div id="books-grid"></div>
+  </main>
 </body>
 
 </html>

@@ -1,0 +1,61 @@
+@font-face {
+  font-family: "Inter";
+  src: url(assets/Inter-VariableFont_slnt\,wght.ttf);
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #101828;
+  font-family:
+    Inter,
+    Helvetica Neue,
+    Helvetica,
+    Arial,
+    sans-serif;
+}
+
+main {
+  max-width: 56rem;
+  margin: auto;
+}
+
+h1 {
+  color: #436850;
+}
+
+#books-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 6px;
+
+  margin-top: 2rem;
+}
+
+.book-card {
+  display: flex;
+  flex-direction: column;
+
+  background-color: #1e2939;
+  border-radius: 5px;
+
+  color: #d1d5dc;
+  padding: 1rem;
+}
+
+button {
+  padding-inline: 1rem;
+  padding-block: 0.5rem;
+  color: #d1d5dc;
+  background-color: #101828;
+  border: #d1d5dc 1px solid;
+  border-radius: 5px;
+
+  margin: 5px;
+}
+
+button:hover {
+  background-color: #364153;
+}
