@@ -1,5 +1,18 @@
-* {
+@font-face {
+  font-family: "Inter";
+  src: url(assets/Inter-VariableFont_slnt\,wght.ttf);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
   margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
   font-family:
     Inter,
     Helvetica Neue,
@@ -8,24 +21,17 @@
     sans-serif;
 }
 
-li {
-  list-style: none;
-}
-
 ul {
-  padding: 0;
+  list-style: none;
 }
 
 a {
   text-decoration: none;
-}
-
-a:visited {
   color: inherit;
 }
 
 /* Page layout */
-.container {
+body {
   min-height: 100vh;
 
   display: grid;
@@ -42,8 +48,8 @@ a:visited {
 
 /* Header */
 header {
-  background: #ffffff;
   grid-area: header;
+  background: #ffffff;
   padding-inline: 2rem;
 
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
@@ -143,21 +149,27 @@ nav {
   gap: 30px;
 }
 
-nav .logo img {
+nav .logo {
+  display: flex;
+  align-items: center;
+  font-size: 1.75rem;
+  font-weight: 600;
+}
+
+nav .logo span {
+  font-size: 1.4em;
   margin-right: 0.75rem;
   transition: transform 200ms ease-in-out;
 }
 
-nav .logo span {
-  font-size: 1.5rem;
-  font-weight: 600;
-}
-
-nav .logo:hover img {
+nav .logo:hover span {
   transform: rotate(35deg);
 }
 
-nav li {
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 1em;
   padding-block: 0.5rem;
   padding-left: 0.5rem;
   border-radius: 0.25rem 0.25rem 0.25rem 1rem;
@@ -166,13 +178,11 @@ nav li {
   transition: all 200ms ease-in-out;
 }
 
-nav li:hover {
+.nav-link:hover {
   background-color: #6cb6de;
-  transform: translateX(-5px);
-}
-
-nav li span {
-  padding-left: 1rem;
+  /* After some changes, this transition produces some jankiness. */
+  /* Should investigate further before implementing */
+  /* translate: -5px; */
 }
 
 nav i {

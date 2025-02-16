@@ -6,18 +6,17 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link href="./style.css" rel="stylesheet" />
-  <script src="https://kit.fontawesome.com/f173a2226f.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined" rel="stylesheet" />
   <link rel="shortcut icon" type="image/x-icon" href="../favicon.png" />
 </head>
 
 <body>
-  <div class="container">
-    <header>
-      <div class="header-top">
-        <div class="search-bar">
-          <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
-          <input type="text" name="q" />
-        </div>
+  <header>
+    <div class="header-top">
+      <div class="search-bar">
+        <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
+        <input type="text" name="q" />
+
         <div class="profile-section">
           <i class="fa-regular fa-bell"></i>
           <img width="40px" src="assets/profile-picture.png" alt="Profile picture of the current user" />
@@ -39,57 +38,50 @@
           <button>Share</button>
         </div>
       </div>
-    </header>
+  </header>
 
-    <nav>
-      <a class="logo" href="">
-        <img width="30px" src="assets/dashboard.svg" alt="Logo of the dashboard" /><span>Dashboard</span>
-      </a>
-      <div class="main-links">
-        <ul>
-          <li>
-            <a href=""><i class="fa-solid fa-house"></i><span>Home</span></a>
-          </li>
-          <li>
-            <a href="">
-              <i class="fa-solid fa-address-card"></i><span>Profile</span>
-            </a>
-          </li>
-          <li>
-            <a href=""><i class="fa-solid fa-message"></i><span>Messages</span></a>
-          </li>
-          <li>
-            <a href=""><i class="fa-solid fa-clock"></i><span>History</span></a>
-          </li>
-          <li>
-            <a href=""><i class="fa-solid fa-note-sticky"></i><span>Tasks</span></a>
-          </li>
-          <li>
-            <a href=""><i class="fa-solid fa-users"></i><span>Communities</span></a>
-          </li>
-        </ul>
-      </div>
+  <nav>
+    <a class="logo" href="">
+      <span class="material-icons"> dashboard </span>Dashboard
+    </a>
+    <ul>
+      <li class="nav-item">
+        <a href="" class="nav-link"><span class="material-icons">home</span>Home</a>
+      </li>
+      <li>
+        <a href="" class="nav-link"><span class="material-icons-outlined"> account_circle </span>
+          Profile</a>
+      </li>
+      <li>
+        <a href="" class="nav-link"><span class="material-icons-outlined"> message </span> Messages</a>
+      </li>
+      <li>
+        <a href="" class="nav-link"><span class="material-icons-outlined"> history </span> History</a>
+      </li>
+      <li>
+        <a href="" class="nav-link"><span class="material-icons-outlined"> task </span> Tasks</a>
+      </li>
+      <li>
+        <a href="" class="nav-link"><span class="material-icons-outlined"> groups </span>
+          Communities</a>
+      </li>
+    </ul>
+    <ul class="nav">
+      <li>
+        <a href="" class="nav-link"><span class="material-icons-outlined"> settings </span> Settings</a>
+      </li>
+      <li>
+        <a href="" class="nav-link"><span class="material-icons-outlined"> help_center </span>
+          Support</a>
+      </li>
+      <li>
+        <a href="" class="nav-link"><span class="material-icons-outlined"> verified_user </span>
+          Privacy</a>
+      </li>
+    </ul>
+  </nav>
 
-      <div class="secondary-links">
-        <ul>
-          <li>
-            <a href=""><i class="fa-solid fa-gear"></i><span>Settings</span></a>
-          </li>
-          <li>
-            <a href="">
-              <i class="fa-solid fa-circle-question"></i><span>Support</span>
-            </a>
-          </li>
-          <li>
-            <a href="">
-              <i class="fa-solid fa-shield-halved"></i><span>Privacy</span>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-
-    <main></main>
+  <main></main>
   </div>
 </body>
 
