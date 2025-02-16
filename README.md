@@ -5,7 +5,7 @@ suggested by [The Odin Project](https://www.theodinproject.com/)
 courses. I started this course as a way to improve my frontend skills, in a fun way.
 
 You can visit the results on the associated
-[Github Pages](https://janadev1.github.io/odin-projects/), or visit the links down below.
+[Github Pages](https://janadev1.github.io/odin-projects/), or using the links down below.
 
 ## Projects
 
