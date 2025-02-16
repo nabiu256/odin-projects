@@ -29,10 +29,9 @@ a:visited {
   min-height: 100vh;
 
   display: grid;
-  grid-template: repeat(1, fit-content(250px)) repeat(4, 1fr) / repeat(
-      1,
-      fit-content(250px)
-    ) repeat(4, 1fr);
+  grid-template:
+    repeat(1, fit-content(250px)) repeat(4, 1fr) / repeat(1, fit-content(250px))
+    repeat(4, 1fr);
   grid-template-areas:
     "nav header header header header"
     "nav main main main main"
@@ -133,34 +132,29 @@ header {
 
 /* Nav sidebar */
 nav {
+  grid-area: nav;
   background: #1992d4;
   color: white;
-  grid-area: nav;
-}
+  padding-inline: 1.5rem;
+  padding-block: 1.25rem;
 
-nav .logo {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-
-  font-size: 1.5rem;
-  font-weight: 600;
-
-  margin-block: 1.25rem;
-  margin-inline: 1.5rem;
+  display: grid;
+  grid-auto-rows: max-content;
+  gap: 30px;
 }
 
 nav .logo img {
+  margin-right: 0.75rem;
   transition: transform 200ms ease-in-out;
+}
+
+nav .logo span {
+  font-size: 1.5rem;
+  font-weight: 600;
 }
 
 nav .logo:hover img {
   transform: rotate(35deg);
-}
-
-nav ul {
-  padding-left: 1.5rem;
-  padding-block: 1rem;
 }
 
 nav li {
