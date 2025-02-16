@@ -29,7 +29,7 @@ a:visited {
   min-height: 100vh;
 
   display: grid;
-  grid-template: repeat(5, 1fr) / repeat(5, 1fr);
+  grid-template: repeat(5, 1fr) / repeat(1, fit-content(250px)) repeat(4, 1fr);
   grid-template-areas:
     "nav header header header header"
     "nav main main main main"
@@ -59,8 +59,16 @@ nav .logo {
   font-size: 1.5rem;
   font-weight: 600;
 
-  padding-block: 1.25rem;
-  padding-inline: 1.5rem;
+  margin-block: 1.25rem;
+  margin-inline: 1.5rem;
+}
+
+nav .logo img {
+  transition: transform 200ms ease-in-out;
+}
+
+nav .logo:hover img {
+  transform: rotate(35deg);
 }
 
 nav ul {
@@ -70,7 +78,16 @@ nav ul {
 
 nav li {
   padding-block: 0.5rem;
-  font-weight: 600;
+  padding-left: 0.5rem;
+  border-radius: 0.25rem 0.25rem 0.25rem 1rem;
+  font-weight: 500;
+
+  transition: all 200ms ease-in-out;
+}
+
+nav li:hover {
+  background-color: #6cb6de;
+  transform: translateX(-5px);
 }
 
 nav li span {
