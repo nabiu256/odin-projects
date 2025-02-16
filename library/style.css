@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Inter";
-  src: url(assets/Inter-VariableFont_slnt\,wght.ttf);
+  src: url(../assets/Inter-VariableFont_slnt\,wght.ttf);
 }
 
 html {
@@ -18,18 +18,68 @@ body {
 }
 
 main {
+  padding-block: 2rem;
   max-width: 56rem;
   margin: auto;
 }
 
 h1 {
-  color: #436850;
+  color: #e5e7eb;
+  margin: 0;
+  margin-bottom: 2rem;
+}
+
+p {
+  margin: 0;
+}
+
+dialog {
+  background-color: #1e2939;
+  color: #d1d5dc;
+  border: #d1d5dc 1px solid;
+  border-radius: 5px;
+}
+
+#dialog-close {
+  background-color: #1e2939;
+}
+
+[type="checkbox"] {
+  accent-color: #009689;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+#books-form__fields {
+  display: grid;
+  align-items: center;
+  justify-items: start;
+  gap: 1rem;
+
+  grid-template-columns: 0.25fr 1fr;
+}
+
+input {
+  background-color: #676f7e;
+  border: none;
+  border-radius: 0.125rem;
+  padding-block: 0.5rem;
+}
+
+::backdrop {
+  background-color: black;
+  opacity: 0.4;
 }
 
 #books-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 6px;
+  gap: 1.5rem;
 
   margin-top: 2rem;
 }
@@ -43,6 +93,12 @@ h1 {
 
   color: #d1d5dc;
   padding: 1rem;
+
+  box-shadow: inset 0 1px 0 0 hsl(0deg 0% 100% / 5%);
+}
+
+.book-card__author {
+  font-style: italic;
 }
 
 button {
@@ -52,8 +108,11 @@ button {
   background-color: #101828;
   border: #d1d5dc 1px solid;
   border-radius: 5px;
+}
 
-  margin: 5px;
+.book-card__content {
+  margin-bottom: 1rem;
+  line-height: 1.5rem;
 }
 
 button:hover {
