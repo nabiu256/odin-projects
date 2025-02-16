@@ -69,6 +69,13 @@ input {
   border: none;
   border-radius: 0.125rem;
   padding-block: 0.5rem;
+  padding-inline: 0.5rem;
+
+  color: #d1d5dc;
+}
+
+input:focus {
+  outline: solid #d1d5dc;
 }
 
 ::backdrop {
