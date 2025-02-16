@@ -201,8 +201,8 @@ section.projects {
   grid-area: projects;
 }
 
-section.projects > h2 {
-  padding-bottom: 0.5rem;
+section.projects>h2 {
+  padding-bottom: 0.75rem;
   font-size: 1.1rem;
   font-weight: 500;
 }
@@ -223,13 +223,22 @@ section.projects .cards-container {
   height: 200px;
 
   border-left: #f0b429 solid 7px;
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.1);
 
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  cursor: pointer;
+  transition: all ease-in-out 150ms;
 }
 
-.project > p {
+.project:hover {
+  translate: 0 -5px;
+  box-shadow: 1px 10px 3px rgba(0, 0, 0, 0.05);
+}
+
+.project>p {
   color: #7c7c7c;
 }
 
