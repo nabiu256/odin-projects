@@ -7,10 +7,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link href="./style.css" rel="stylesheet" />
   <link rel="shortcut icon" type="image/x-icon" href="../favicon.png" />
+  <script src="script.js" defer></script>
 </head>
 
 <body>
-  <h1>Library placeholder</h1>
+  <h1>Your library</h1>
+  <form action="" id="books-form">
+    <label for="title">Title</label>
+    <input type="text" name="title" id="title" />
+    <label for="author">Author</label>
+    <input type="text" name="author" id="author" />
+    <label for="pages">Pages</label>
+    <input type="number" name="pages" id="pages" />
+    <label for="read">Read?</label>
+    <input type="checkbox" name="read" id="read" />
+
+    <button>Add book</button>
+  </form>
+  <div id="books-grid"></div>
 </body>
 
 </html>
