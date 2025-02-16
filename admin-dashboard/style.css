@@ -40,8 +40,88 @@ a:visited {
 
 /* Header */
 header {
-  background: #7b66ff;
+  background: #ffffff;
   grid-area: header;
+  padding-inline: 2rem;
+
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  padding-block: 1.25rem;
+
+  gap: 50px;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  flex: 1;
+}
+
+.search-bar input[type="text"] {
+  background-color: #e2e8f0;
+  border: none;
+  border-radius: 20px;
+  padding-block: 5px;
+  padding-inline: 10px;
+
+  flex: 1;
+
+  font-size: 1rem;
+}
+
+.search-bar i {
+  width: 10px;
+  transform: translateY(3px);
+}
+
+.profile-section {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.profile-section img {
+  border-radius: 100%;
+}
+
+.header-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 1rem;
+}
+
+.header-bottom .welcome-section {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.welcome-section img {
+  border-radius: 100%;
+}
+
+.action-buttons button {
+  background-color: #1992d4;
+  color: #ffffff;
+  border: none;
+
+  padding-block: 0.5rem;
+  padding-inline: 1.25rem;
+  border-radius: 20px;
+
+  margin-inline: 3px;
+}
+
+.action-buttons button:hover {
+  cursor: pointer;
 }
 
 /* Nav sidebar */
@@ -100,6 +180,8 @@ nav i {
 
 /* Main content */
 main {
-  background: #c5fff8;
+  background: #e2e8f0;
   grid-area: main;
+
+  z-index: -1;
 }
