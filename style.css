@@ -58,6 +58,10 @@ body {
   font-size: 1.25rem;
 }
 
+.card button:hover {
+  cursor: inherit;
+}
+
 a {
   text-decoration: none;
 }
