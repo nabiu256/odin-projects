@@ -18,7 +18,7 @@ You can visit the results on the associated
 
 **JavaScript**
 
-- Library: [project definition](https://www.theodinproject.com/lessons/node-path-javascript-library), [work in progress](https://nabiu256.github.io/odin-projects/library/index.html).
+- Library: [project definition](https://www.theodinproject.com/lessons/node-path-javascript-library), [result](https://nabiu256.github.io/odin-projects/library/index.html).
 - Tic Tac Toe: [project definition](https://www.theodinproject.com/lessons/node-path-javascript-tic-tac-toe), pending.
 - Restaurant Page: [project definition](https://www.theodinproject.com/lessons/node-path-javascript-restaurant-page), pending.
 - Todo List: [project definition](https://www.theodinproject.com/lessons/node-path-javascript-todo-list), pending.

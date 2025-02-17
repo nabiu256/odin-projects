@@ -1,3 +1,5 @@
 # Project: Library
 
 You can find the full project definition [on The Odin Project website](https://www.theodinproject.com/lessons/node-path-javascript-library).
+
+You can see the result [here](https://nabiu256.github.io/odin-projects/library/index.html).
