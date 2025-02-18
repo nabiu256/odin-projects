@@ -48,17 +48,13 @@ main {
   text-align: center;
 }
 
-.win-text {
+.status-text {
   text-align: center;
   margin: 0;
   color: #464e5e;
   margin-bottom: 0.75rem;
 
   cursor: pointer;
-}
-
-.hidden {
-  visibility: hidden;
 }
 
 .game-board-container {

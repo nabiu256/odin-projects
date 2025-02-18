@@ -145,7 +145,19 @@ const displayController = (function() {
     }
   }
 
-  return { renderBoard };
+  // Node that holds the win text
+  const statusText = document.querySelector(".status-text");
+
+  /**
+   * Updates the status text shown to the user.
+   * 
+   * @param {string} text The text that the status component should show to the user.
+   */
+  const updateStatus = (text) => {
+    statusText.innerHTML = text;
+  }
+
+  return { renderBoard, updateStatus };
 })();
 
 const game = (function() {
@@ -158,25 +170,24 @@ const game = (function() {
   // We track this state with this variable.
   let isFinished = false;
 
-  // Node that holds the win text
-  const winText = document.querySelector(".win-text");
 
   const setupHandlers = () => {
     // Set controls for the players. Basically, they can click on a cell to make a play.
     for (let i = 0; i < 3; i++) {
       for (let j = 0; j < 3; j++) {
         const nth = (i * 3) + (j + 1);
-        let cell = document.querySelector(`.game-board div:nth-child(${nth})`);
+        const cell = document.querySelector(`.game-board div:nth-child(${nth})`);
         cell.addEventListener("click", () => playRound(i, j));
       }
     }
 
     // Clicking the win text resets the game.
-    winText.addEventListener("click", () => resetHandler());
+    document.querySelector(".status-text").addEventListener("click", () => resetGameHandler());
   }
 
   const switchActivePlayer = () => {
     activePlayer = activePlayer === "X" ? "O" : "X";
+    displayController.updateStatus(`It's player ${activePlayer === "X" ? 1 : 2} turn.`);
   }
 
   const printRound = () => {
@@ -189,7 +200,7 @@ const game = (function() {
   const playRound = (row, column) => {
     // If game is finished, no moves are possible
     if (isFinished) {
-      console.log("Game is paused, cannot accept any moves right now.")
+      console.log("Game finished, cannot accept any moves right now until restart.")
       return;
     }
 
@@ -206,20 +217,17 @@ const game = (function() {
     switch (result) {
       case "X":
         console.log("Player 1 has won.");
-        winText.innerText = "Player 1 won! Click here to play again."
-        winText.classList.remove("hidden");
+        displayController.updateStatus("Player 1 won! Click here to play again.")
         toggleFinished();
         return;
       case "O":
         console.log("Player 2 has won.");
-        winText.innerText = "Player 2 won! Click here to play again."
-        winText.classList.remove("hidden");
+        displayController.updateStatus("Player 2 won! Click here to play again.")
         toggleFinished();
         return;
       case null:
         console.log("Stalemate.");
-        winText.innerText = "Stalemate. Click here to play again."
-        winText.classList.remove("hidden");
+        displayController.updateStatus("Stalemate. Click here to play again.")
         toggleFinished();
         return;
     }
@@ -228,20 +236,21 @@ const game = (function() {
     printRound();
   }
 
-  const resetHandler = () => {
-    // We should only be able to reset the game whenever it has paused
+  const resetGameHandler = () => {
+    // We should only be able to reset the game whenever it has finished
     if (isFinished) {
       resetGame();
       toggleFinished();
     }
   }
 
-  const resetGame = async () => {
+  const resetGame = () => {
     console.log("Resetting game...");
-    winText.innerHTML = "Waiting for round...";
-    winText.classList.add("hidden");
+
+    displayController.updateStatus(`Player ${activePlayer === "X" ? 1 : 2} (${activePlayer}) goes first.`)
     board.resetBoard();
     displayController.renderBoard(board);
+
     printRound();
   }
 
@@ -249,5 +258,5 @@ const game = (function() {
   printRound();
   displayController.renderBoard(board);
 
-  return { playRound, resetHandler }
+  return { playRound, resetGameHandler }
 })();
